@@ -1,5 +1,5 @@
 # 102101619
-# requiremes.txt ---开发环境
+# requirements.txt ---开发环境
 # barrage_list ---爬取弹幕代码
 # format_conversion ---将xls文件转化为txt文件
 # wordcloud ---制作词云图
