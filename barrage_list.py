@@ -96,6 +96,7 @@ def barrage_statistics(barrage):
     data = pd.Series(barrage)
     barrage_sorting = data.value_counts()
     danmu_dict = {}
+    print('正在输出排名前二十弹幕信息：\n')
     for i in range(20):  # 输出排名前二十的弹幕信息
         data = barrage_sorting.index[i]
         num = barrage_sorting[data]
@@ -116,9 +117,13 @@ def create_workbook(barrage_sorting):
 
 
 def main():
+    print('正在运行中，请稍后\n')
     aid_list = get_aid()
+    print('aid获取成功\n')
     oid = get_oid(aid_list=aid_list)
+    print('oid获取成功\n')
     barrage = get_barrage(oid_list=oid)
+    print('弹幕数据获取成功，正在对弹幕进行处理\n')
     # 利用pands库对弹幕数据进行统计处理
     barrage_sorting = barrage_statistics(barrage=barrage)
     # 创建一个xlsx文件，将弹幕数据导入xlsx文件内
